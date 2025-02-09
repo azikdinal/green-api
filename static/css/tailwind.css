@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 640px) {
+  .container {
+    justify-content: center !important;
+  }
+}
+
+.message-box {
+  width: 40vw;
+}

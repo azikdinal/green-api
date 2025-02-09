@@ -1,0 +1,116 @@
+{% extends "base.html" %} {% block title %}Пользователи{% endblock %} {% block
+page_name %}Пользователи{% endblock %}{% block content %}
+<div class="flex flex-row justify-around h-screen">
+  <div>
+    <div>
+      <div class="mb-4">
+        <label class="block text-sm font-bold mb-2" for="name">id сессии</label>
+        <input
+          class="dark:bg-gray-700 border-blue-500 text-blue-700 focus:border-blue-500 focus:ring focus:ring-blue-300 rounded p-2"
+          id="idInstance"
+          name="idInstance"
+          type="text"
+        />
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-bold mb-2" for="name"
+          >API токен сессии</label
+        >
+        <input
+          class="dark:bg-gray-700 border-blue-500 text-blue-700 focus:border-blue-500 focus:ring focus:ring-blue-300 rounded p-2"
+          id="apiTokenInstance"
+          type="password"
+        />
+      </div>
+    </div>
+    <div class="h-4"></div>
+    <!-- кнопки получения данных -->
+    <div>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="button"
+        id="getSettings"
+      >
+        Получить настройки
+      </button>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="submit"
+        id="getStateInstance"
+      >
+        Получить состояние сессии
+      </button>
+    </div>
+    <div class="h-4"></div>
+    <!-- сообщение -->
+    <div>
+      <div class="mb-4">
+        <label class="block text-sm font-bold mb-2" for="name">Номер</label>
+        <input
+          class="dark:bg-gray-700 border-blue-500 text-blue-700 focus:border-blue-500 focus:ring focus:ring-blue-300 rounded p-2"
+          id="number1"
+          type="text"
+          required
+        />
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm font-bold mb-2" for="message"
+          >Сообщение</label
+        >
+        <textarea
+          class="dark:bg-gray-700 shadow appearance-none border rounded py-2 px-3 leading-tight focus:border-blue-500 focus:shadow-outline"
+          id="message"
+          rows="4"
+          required
+        ></textarea>
+      </div>
+      <div class="flex items-center justify-between">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          id="sendMessage"
+        >
+          Отпавить сообщение
+        </button>
+      </div>
+    </div>
+    <div class="h-4"></div>
+    <!-- файл -->
+    <div>
+      <div class="mb-4">
+        <label class="block text-sm font-bold mb-2" for="name">Номер</label>
+        <input
+          class="dark:bg-gray-700 border-blue-500 text-blue-700 focus:border-blue-500 focus:ring focus:ring-blue-300 rounded p-2"
+          id="number2"
+          type="text"
+          required
+        />
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm font-bold mb-2" for="name"
+          >Путь к файлу</label
+        >
+        <input
+          class="dark:bg-gray-700 border-blue-500 text-blue-700 focus:border-blue-500 focus:ring focus:ring-blue-300 rounded p-2"
+          id="filePath"
+          type="text"
+          required
+        />
+      </div>
+      <div class="flex items-center justify-between">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          id="sendFileByUrl"
+        >
+          Отправить файл
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="ml-6">
+    <h3>Ответ:</h3>
+    <div id="answer" class="border h-full message-box p-2"></div>
+  </div>
+</div>
+{% endblock %}
